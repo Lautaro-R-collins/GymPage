@@ -1,0 +1,81 @@
+---
+const testimonials = [
+  { name: "John Doe", text: "This gym changed my life!" },
+  { name: "Jane Smith", text: "Amazing trainers and environment!" },
+  { name: "Mark Johnson", text: "I love the energy in every class." },
+  { name: "Lucy Brown", text: "Professional and motivating." },
+  { name: "Alex Green", text: "Flexible schedules and great results." },
+  { name: "Emma White", text: "Friendly community and effective workouts." },
+];
+---
+
+<section class="py-24 bg-gray-950 overflow-hidden">
+  <h2
+    class="text-3xl md:text-5xl font-bold text-white text-center mb-12 text-shadow"
+  >
+    TESTIMONIALS
+  </h2>
+
+  <div class="relative w-full overflow-hidden">
+    <!-- Slider 1: izquierda a derecha -->
+    <div class="flex animate-slide-left space-x-8">
+      {
+        testimonials.concat(testimonials).map((t, i) => (
+          <div class="min-w-[250px] bg-[#150631] rounded-2xl p-6 text-white shadow-lg drop-shadow-[5px_5px_0_#0debd8]">
+            <p class="text-sm mb-4">"{t.text}"</p>
+            <span class="font-bold">{t.name}</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Slider 2: derecha a izquierda -->
+    <div class="flex animate-slide-right space-x-8 mt-6">
+      {
+        testimonials.concat(testimonials).map((t, i) => (
+          <div class="min-w-[250px] bg-[#150631] rounded-2xl p-6 mb-2 text-white shadow-lg drop-shadow-[5px_5px_0_#0debd8]">
+            <p class="text-sm mb-4">"{t.text}"</p>
+            <span class="font-bold">{t.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-left {
+    animation: slide-left 20s linear infinite;
+  }
+
+  .animate-slide-right {
+    animation: slide-right 20s linear infinite;
+  }
+
+  .animate-slide-left:hover,
+  .animate-slide-right:hover {
+    animation-play-state: paused;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 0 #620deb;
+  }
+</style>
