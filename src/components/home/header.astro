@@ -1,0 +1,71 @@
+<header class="relative h-screen bg-gray-950 overflow-hidden">
+  <div class="absolute inset-0 grid grid-cols-2">
+    <div
+      class="animate-gradientMove h-80 bg-linear-to-br from-[#2cc2f0] to-[#1f6986] opacity-30 blur-[120px]"
+    >
+    </div>
+    <div
+      class="animate-gradientMove2 h-80 bg-linear-to-br from-[#277752] to-[#02ffee] opacity-30 blur-[120px]"
+    >
+    </div>
+  </div>
+
+  <main
+    class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
+  >
+    <h1
+      class="text-4xl md:text-7xl font-bold text-primary mb-6 text-shadow-cyan"
+    >
+      AstroGym
+    </h1>
+    <p class="text-lg md:text-2xl text-white mb-8 max-w-2xl font-bold">
+      Build strength, burn fat, and transform your body with our science-based
+      workouts and dedicated coaches.
+    </p>
+    <a
+      href="/contact"
+      class="px-6 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-3xl transition-all duration-150
+         drop-shadow-[2px_2px_0_#0debd8] active:translate-0.5 active:drop-shadow-none"
+    >
+      Contact Us
+    </a>
+  </main>
+</header>
+
+<style>
+  @keyframes gradientMove {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-250px) translateY(120px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  @keyframes gradientMove2 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(250px) translateY(-120px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+
+  .animate-gradientMove {
+    animation: gradientMove 8s ease-in-out infinite alternate;
+  }
+
+  .animate-gradientMove2 {
+    animation: gradientMove2 8s ease-in-out infinite alternate;
+  }
+
+  .text-shadow-cyan {
+    text-shadow: 2px 2px 0 #0debd8;
+  }
+</style>
