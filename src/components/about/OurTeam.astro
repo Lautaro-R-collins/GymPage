@@ -1,0 +1,29 @@
+---
+import TeamCard from "./TeamCard.astro";
+import { teamMembers } from "../../data/teamMembers.js";
+---
+
+<section class="bg-gray-950 py-24 text-white">
+  <div class="max-w-7xl mx-auto px-6 text-center mb-12">
+    <h2
+      class="text-4xl md:text-5xl font-extrabold text-white tracking-wide text-shadow"
+    >
+      Our Team
+    </h2>
+  </div>
+
+  <div
+    class="max-w-7xl mx-auto px-6 grid gap-8 sm:grid-cols-2 md:grid-cols-3 justify-items-center"
+  >
+    {
+      teamMembers.map((member) => (
+        <TeamCard
+          name={member.name}
+          role={member.role}
+          image={member.image}
+          description={member.description}
+        />
+      ))
+    }
+  </div>
+</section>
