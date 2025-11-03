@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-// import Navbar from '../components/common/navbar.astro'
-// import Footer from '../components/common/footer.astro'
+import Navbar from '../components/commons/navbar.astro'
+import Footer from '../components/commons/footer.astro'
 ---
 
 <!doctype html>
@@ -11,11 +11,11 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>GymPage</title>
+		<title>AstroGym</title>
 	</head>
-	<body>
-		<!-- <Navbar /> -->
+	<body class="bg-gray-950 text-white">
+		<Navbar />
 		<slot />
-		<!-- <Footer /> -->
+		<Footer />
 	</body>
 </html>
