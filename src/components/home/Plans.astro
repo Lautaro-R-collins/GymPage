@@ -1,0 +1,18 @@
+---
+import PlanCard from './PlanCard.astro';
+import { plans } from '../../data/PlanData.js';
+---
+
+<section class=" bg-gray-950">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl md:text-5xl font-bold text-white mb-12 text-shadow">
+      MEMBERSHIP PLANS
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+      {plans.map((plan) => (
+        <PlanCard title={plan.title} price={plan.price} features={plan.features} />
+      ))}
+    </div>
+  </div>
+</section>
