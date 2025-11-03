@@ -1,0 +1,28 @@
+---
+// data
+import { faqs } from '../../data/faqs.js';
+---
+
+<section class="py-24 bg-gray-950">
+  <div class="max-w-3xl mx-auto px-6">
+
+    <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 text-center text-shadow">
+      FAQs
+    </h2>
+
+    <div class="flex flex-col gap-4">
+      {faqs.map((faq, index) => (
+        <div class="collapse collapse-plus bg-[#290d57] border border-none rounded-lg drop-shadow-[5px_5px_0_#0debd8]">
+          <input type="radio" name="faq-accordion" checked={index === 0} />
+          <div class="collapse-title text-white font-semibold">
+            {faq.question}
+          </div>
+          <div class="collapse-content text-gray-300 text-sm">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</section>
