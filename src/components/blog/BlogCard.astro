@@ -1,0 +1,33 @@
+---
+const { post } = Astro.props;
+---
+
+<article
+  class="bg-[#0debd8] border-none rounded-2xl p-4 flex flex-col justify-between hover:scale-105 hover:border-primary transition-all duration-300 max-w-md drop-shadow-[6px_6px_0_#7836cf]"
+>
+  <a href={`/blog/${post.slug}`} class="block mb-3">
+    {
+      post.image && (
+        <img
+          src={post.image}
+          alt={post.title}
+          class="w-full h-36 object-cover rounded-xl mb-3"
+        />
+      )
+    }
+    <h2 class="text-lg font-bold text-[#290d57] mb-1 hover:underline">
+      {post.title}
+    </h2>
+  </a>
+
+  <p class="text-[#290d57] font-semibold text-sm mb-3">
+    {post.description}
+  </p>
+
+  <a
+    href={`/blog/${post.slug}`}
+    class="px-3 py-2 bg-primary text-white font-semibold rounded-3xl transition drop-shadow-[2px_2px_0_#0debd8] w-max"
+  >
+    Read More →
+  </a>
+</article>
