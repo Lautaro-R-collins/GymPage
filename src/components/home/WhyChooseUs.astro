@@ -1,0 +1,30 @@
+---
+import Card from "./CardChoose.astro";
+import { cards } from "../../data/CardChooseData.js";
+---
+
+<section class="py-24 bg-gray-950">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2
+      class="text-3xl md:text-5xl font-bold text-white mb-12 text-shadow"
+    >
+      WHY CHOOSE US
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+      {
+        cards.map((card, index) => (
+          <div class={`${index % 2 === 0 ? "md:mt-13" : ""} max-w-xl w-full`}>
+            <Card title={card.title} text={card.text} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-shadow {
+    text-shadow: 3px 3px 0 #33106d;
+  }
+</style>
