@@ -1,0 +1,18 @@
+---
+// Props
+export interface Props {
+  icon?: string;
+  title: string;
+  description: string;
+}
+
+const { icon, title, description } = Astro.props;
+---
+
+<div
+  class="bg-[#0debd8] border border-none rounded-2xl p-6 text-center duration-300 max-w-xs drop-shadow-[8px_8px_0_#7836cf]"
+>
+  {icon && <div class="text-4xl mb-4">{icon}</div>}
+  <h3 class="text-xl font-bold text-[#290d57] mb-2">{title}</h3>
+  <p class="text-[#290d57] font-bold text-sm">{description}</p>
+</div>
