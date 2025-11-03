@@ -1,0 +1,126 @@
+<div class="relative">
+  <!-- Input control (peer) -->
+  <input id="menu-toggle" type="checkbox" class="peer hidden" />
+
+  <!-- Navbar -->
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-gray-950/20 backdrop-blur-md border-b border-white/10"
+  >
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center">
+        <img src="/logo.svg" alt="Logo" class="w-12 h-12" />
+      </a>
+
+      <!-- Links md+ -->
+      <ul class="hidden md:flex space-x-8">
+        <li>
+          <a
+            href="/"
+            class="relative group text-white font-bold transition-colors duration-300 hover:text-secondary"
+            ><span
+              class="absolute left-0 -bottom-2 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"
+            ></span>Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about"
+            class="relative group text-white font-bold transition-colors duration-300 hover:text-secondary"
+            ><span
+              class="absolute left-0 -bottom-2 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"
+            ></span>About</a
+          >
+        </li>
+        <li>
+          <a
+            href="/blog"
+            class="relative group text-white font-bold transition-colors duration-300 hover:text-secondary"
+            ><span
+              class="absolute left-0 -bottom-2 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"
+            ></span>Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact"
+            class="px-6 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-3xl transition-all duration-150
+         drop-shadow-[2px_2px_0_#0debd8] active:translate-0.5 active:drop-shadow-none"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botón hamburguesa móvil -->
+      <label
+        for="menu-toggle"
+        class="md:hidden cursor-pointer z-50 flex items-center"
+      >
+        <svg
+          class="h-6 w-6 text-white peer-checked:hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg
+          class="h-6 w-6 text-white hidden peer-checked:block"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </label>
+    </div>
+  </nav>
+
+  <!-- Overlay -->
+  <label
+    for="menu-toggle"
+    class="fixed inset-0 bg-black/60 hidden peer-checked:block cursor-pointer z-50"
+  ></label>
+
+  <!-- Sidebar sólido móvil -->
+  <div
+    class="fixed top-0 right-0 h-full w-64 bg-gray-900 shadow-lg transform translate-x-full transition-transform duration-300 peer-checked:translate-x-0 z-60"
+  >
+    <ul class="flex flex-col space-y-6 mt-10 ml-6">
+      <li>
+        <a href="/" class="text-white text-lg font-bold hover:text-secondary"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about"
+          class="text-white text-lg font-bold hover:text-secondary">About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/blog"
+          class="text-white text-lg font-bold hover:text-secondary">Blog</a
+        >
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="px-6 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-3xl transition-all duration-150
+         drop-shadow-[2px_2px_0_#0debd8] active:translate-0.5 active:drop-shadow-none"
+        >
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
