@@ -1,0 +1,94 @@
+---
+import Base from "../../layouts/Base.astro";
+import { blogPosts } from "../../data/blogData.js";
+import Breadcrumbs from "../../components/blog/Breadcrumbs.astro";
+
+export async function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
+---
+
+<Base title={post.title}>
+  <article class="max-w-4xl mx-auto px-6 py-20">
+    <Breadcrumbs
+      items={[
+        { label: "Inicio", href: "/" },
+        { label: "Blog", href: "/blog" },
+        { label: post.title },
+      ]}
+    />
+
+    <img
+      src={post.image}
+      alt={post.title}
+      class="w-full h-96 object-cover rounded-2xl shadow-lg mb-8"
+    />
+
+    <h1
+      class="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[2px_2px_0_#290d57]"
+    >
+      {post.title}
+    </h1>
+
+    <p class="text-gray-300 text-sm mb-8">
+      {post.date} • {post.author}
+    </p>
+
+    <div class="prose prose-lg max-w-none text-white" set:html={post.content} />
+
+    <a
+      href="/blog"
+      class="inline-block my-6 px-6 py-3 bg-[#0debd8] text-[#290d57] font-semibold rounded-2xl drop-shadow-[8px_8px_0_#7836cf] hover:scale-105 hover:drop-shadow-[4px_4px_0_#7836cf] transition"
+    >
+      Return to Blog
+    </a>
+
+    <!-- Related Articles -->
+{relatedPosts.length > 0 && (
+  <section class="mt-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 drop-shadow-[2px_2px_0_#290d57]">
+      Related Articles
+    </h2>
+
+    <div class="grid gap-8 md:grid-cols-2 justify-items-center">
+      {relatedPosts.map((post) => (
+        <article class="bg-[#0debd8] border-none rounded-2xl p-4 flex flex-col justify-between hover:scale-105 hover:border-primary transition-all duration-300 max-w-md drop-shadow-[6px_6px_0_#7836cf]">
+          
+          <a href={`/blog/${post.slug}`} class="block mb-3">
+            {post.image && (
+              <img
+                src={post.image}
+                alt={post.title}
+                class="w-full h-36 object-cover rounded-xl mb-3"
+              />
+            )}
+            <h2 class="text-lg font-bold text-[#290d57] mb-1 hover:underline">
+              {post.title}
+            </h2>
+          </a>
+
+          <p class="text-[#290d57] font-semibold text-sm mb-3">
+            {post.description}
+          </p>
+
+          <a
+            href={`/blog/${post.slug}`}
+            class="px-3 py-2 bg-primary text-white font-semibold rounded-3xl transition drop-shadow-[2px_2px_0_#0debd8] w-max"
+          >
+            Read More →
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+)}
+
+  </article>
+</Base>
