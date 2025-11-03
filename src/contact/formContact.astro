@@ -1,0 +1,92 @@
+<section class="px-6 py-20 max-w-7xl mx-auto bg-gray-950 text-gray-200">
+  <div class="flex flex-col md:flex-row items-start gap-12">
+    <!-- Texto -->
+    <div class="w-full md:w-1/2 text-left flex flex-col justify-start md:pt-4">
+      <p class="text-xl md:text-2xl font-semibold leading-7 mb-6">
+        Send us a message and we’ll get back to you as soon as possible. Our
+        team is ready to help you reach your goals with professional guidance.
+      </p>
+      <p class="text-xl md:text-2xl font-semibold leading-7">
+        You can also contact us directly via email or phone if you prefer.
+      </p>
+    </div>
+
+    <!-- Formulario -->
+    <div class="w-full md:w-1/2">
+  <form class="space-y-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Nombre -->
+          <div class="flex flex-col">
+            <label for="name" class="font-semibold mb-3">First Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              class="bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#0debd8]"
+              required
+            />
+          </div>
+
+          <!-- Apellido -->
+          <div class="flex flex-col">
+            <label for="lastname" class="font-semibold mb-3">Last Name</label>
+            <input
+              type="text"
+              id="lastname"
+              placeholder="Your last name"
+              class="bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#0debd8]"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Correo -->
+          <div class="flex flex-col">
+            <label for="email" class="font-semibold mb-3">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@email.com"
+              class="bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#0debd8]"
+              required
+            />
+          </div>
+
+          <!-- Teléfono -->
+          <div class="flex flex-col">
+            <label for="phone" class="font-semibold mb-3">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="+54 9 ..."
+              class="bg-gray-900 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#0debd8]"
+            />
+          </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="flex flex-col">
+          <label for="message" class="font-semibold mb-3">Message</label>
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Write your message..."
+            class="bg-gray-900 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#0debd8] resize-none"
+            required></textarea>
+        </div>
+
+        <!-- Botón -->
+        <div class="text-right">
+          <button
+            type="submit"
+            class="px-6 py-3 bg-[#290d57] hover:bg-[#1b083d] text-white font-semibold rounded-3xl transition-all duration-150
+              drop-shadow-[2px_2px_0_#0debd8] active:translate-y-0.5 active:drop-shadow-none"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
