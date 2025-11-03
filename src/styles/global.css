@@ -1,4 +1,38 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-   themes: light;
-};
+  themes: light;
+}
+
+.primary {
+  color: #7836cf;
+}
+.secondary {
+  color: #512092;
+}
+.bg-primary {
+  background-color: #7836cf;
+}
+.bg-secondary {
+  background-color: #512092;
+}
+.text-primary {
+  color: #7836cf;
+}
+
+/* reglas hover (usar estas clases directamente) */
+.hover-text-secondary:hover {
+  color: #7836cf;
+}
+.hover-bg-secondary:hover {
+  background-color: #7836cf;
+}
+.hover\:bg-secondary:hover {
+  background-color: #512092;
+}
+.hover\:text-secondary:hover {
+  color: #512092;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0 #620deb;
+}
