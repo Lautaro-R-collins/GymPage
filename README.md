@@ -1,46 +1,50 @@
-# Astro Starter Kit: Basics
+# 🌌 AstroFit
 
-```sh
-npm create astro@latest -- --template basics
-```
+AstroFit is a modern and fully responsive fitness-themed website built with **Astro 5**, designed as a template for gyms, personal trainers, and online coaching platforms.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+🔗 **Live Demo:** https://gym-page-sandy.vercel.app  
+📦 **Ready to be used as an Astro Theme**  
+⚡ Optimized for performance — score 100/100 on Lighthouse
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🏷️ Badges
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+![Astro](https://img.shields.io/badge/Astro-5.0+-black?logo=astro&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38bdf8?logo=tailwindcss&logoColor=white)
+![DaisyUI](https://img.shields.io/badge/DaisyUI-4.x-ff69b4)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## ✨ Features
 
-All commands are run from the root of the project, from a terminal:
+✅ Fully responsive design  
+✅ Blog section with pagination  
+✅ Reusable Astro components  
+✅ About, Services, Contact, Home pages  
+✅ Contact form UI (no backend required)  
+✅ Dynamic blog cards powered by data file  
+✅ Minimal + modern UI with Tailwind & DaisyUI  
+✅ SEO-friendly meta tags  
+✅ Ready for deployment on Vercel / Netlify
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 🛠️ Tech Stack
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Technology | Use |
+|------------|-----|
+| **Astro 5** | Main framework |
+| **TailwindCSS** | Styling |
+| **DaisyUI** | Prebuilt UI components |
+| **TypeScript (optional)** | Component types |
+| **Vercel** | Deployment (demo) |
+
+---
+![Diseño sin título](https://github.com/user-attachments/assets/01beffa6-3ace-4512-ab7c-483d641d606b)
+
+
+
+
