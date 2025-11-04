@@ -13,7 +13,6 @@ AstroFit is a modern and fully responsive fitness-themed website built with **As
 ![Astro](https://img.shields.io/badge/Astro-5.0+-black?logo=astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38bdf8?logo=tailwindcss&logoColor=white)
 ![DaisyUI](https://img.shields.io/badge/DaisyUI-4.x-ff69b4)
-![License](https://img.shields.io/badge/License-MIT-blue)
 ![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
 
 ---
